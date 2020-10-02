@@ -27,6 +27,10 @@
 #'reef<-load.image(photo)
 #'AcuityView(photo = reef, distance = 2, realWidth = 2, eyeResolutionX = 2,
 #'eyeResolutionY = NULL, plot = TRUE, output="Example.jpeg")
+#'\dontshow{
+#'unlink("Example.jpeg")
+#'}
+#'
 #'@export
 
 AcuityView <- function(photo = NULL, distance = 2, realWidth = 2, eyeResolutionX = 0.2, eyeResolutionY = NULL, plot = T, output="test.jpg"){

@@ -4,9 +4,15 @@
 \alias{AcuityView}
 \title{AcuityView}
 \usage{
-AcuityView(photo = NULL, distance = 2, realWidth = 2,
-  eyeResolutionX = 0.2, eyeResolutionY = NULL, plot = T,
-  output = "test.jpg")
+AcuityView(
+  photo = NULL,
+  distance = 2,
+  realWidth = 2,
+  eyeResolutionX = 0.2,
+  eyeResolutionY = NULL,
+  plot = T,
+  output = "test.jpg"
+)
 }
 \arguments{
 \item{photo}{The photo you wish to alter; if NULL then a pop up window allows you to navigate to your photo, otherwise include the file path here}
@@ -49,4 +55,8 @@ photo<-system.file('extdata/reef.bmp', package='AcuityView')
 reef<-load.image(photo)
 AcuityView(photo = reef, distance = 2, realWidth = 2, eyeResolutionX = 2,
 eyeResolutionY = NULL, plot = TRUE, output="Example.jpeg")
+\dontshow{
+unlink("Example.jpeg")
+}
+
 }
